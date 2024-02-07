@@ -1,7 +1,7 @@
 const express = require('express');
 
 const router = express.Router();
-const connect = require('../../../src/db')
+
 const { Fitxa } = require('../models/fitxar-model.js');
 
 router.get('/', async (req, res) => {

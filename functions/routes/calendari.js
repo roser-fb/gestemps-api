@@ -1,7 +1,7 @@
 const express = require('express');
 const moment = require('moment');
 const router = express.Router();
-const connect = require('../../../src/db')
+
 const { Guardia } = require('../models/guardia-model');
 const { Festiu } = require('../models/festiu-model');
 const { Periode } = require('../models/periode-model');

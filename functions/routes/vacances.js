@@ -1,7 +1,7 @@
 const express = require('express');
 const moment = require('moment');
 const router = express.Router();
-const connect = require('../../../src/db')
+
 const { Periode } = require('../models/periode-model');
 
 router.get('/', async (req, res) => {

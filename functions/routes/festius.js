@@ -1,7 +1,7 @@
 const express = require('express');
 const moment = require('moment');
 const router = express.Router();
-const connect = require('../../../src/db')
+
 const { Festiu } = require('../models/festiu-model');
 
 router.get('/', async (req, res) => {
