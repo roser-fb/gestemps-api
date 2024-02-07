@@ -8,7 +8,6 @@
   "keywords": [],
   "author": "roser-fb",
   "license": "ISC",
-  "type": "module",
   "description": "",
   "dependencies": {
     "bcryptjs": "^2.4.3",
