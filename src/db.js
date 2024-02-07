@@ -2,8 +2,10 @@ const mongoose = require('mongoose');
 
 const connectToDB = async () => {
   try {
-    mongoose.set('strictQuery', true);
-    mongoose.connect(`${process.env.DB_URL}/${process.env.DB_NAME}`)
+    mongoose.connect("mongodb+srv://fusterrosbergva:99NVDJfmmQikppVx@cluster.iq6mds2.mongodb.net/?retryWrites=true&w=majority/vacances", {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+   })
     .then(() => console.log("mongoose Connected!"));
   } catch (error) {
     console.log(error);

@@ -1,9 +1,9 @@
 const express = require('express');
 const moment = require('moment');
 const router = express.Router();
-const connection = require('../../../src/db')
-const { Festiu } = require('../models/festius-model');
-connection.connect();
+const connect = require('../../../src/db')
+const { Festiu } = require('../models/festiu-model');
+
 router.get('/', async (req, res) => {
   try {
     const results = await Festiu.find().sort({ data_ini: 1 });

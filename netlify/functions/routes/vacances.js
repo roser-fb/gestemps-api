@@ -1,9 +1,9 @@
 const express = require('express');
 const moment = require('moment');
 const router = express.Router();
-const connection = require('../../../src/db')
+const connect = require('../../../src/db')
 const { Periode } = require('../models/periode-model');
-connection.connect();
+
 router.get('/', async (req, res) => {
   try {
     const results = await Periode.find().sort({ data_ini: 1 });

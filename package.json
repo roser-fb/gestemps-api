@@ -4,9 +4,9 @@
   
   "version": "1.0.0",
   
-  "main": "index.js",
+  "main": "./netlify/functions/index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node ./netlify/functions/index.js",
     "build": "echo 'No se necesita construir para una API Express'"
   },
   

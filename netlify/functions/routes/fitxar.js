@@ -1,9 +1,9 @@
 const express = require('express');
 
 const router = express.Router();
-const connection = require('../../../src/db')
-const { Fitxa } = require('../models/fitxar-model');
-connection.connect();
+const connect = require('../../../src/db')
+const { Fitxa } = require('../models/fitxar-model.js');
+
 router.get('/', async (req, res) => {
   try {
     const results = await Fitxa.find().sort({ data_ini: -1 });

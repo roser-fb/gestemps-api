@@ -2,9 +2,8 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const connection = require('../../../src/db')
-const { User } = require('../models/user-model');
-connection.connect();
+const { User } = require('../models/user-model.js');
+
 router.post("/login", async (req, res) => {
   const { user, pwd } = req.body;
   try {

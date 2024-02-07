@@ -3,6 +3,8 @@ const serverless = require('serverless-http')
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
+const connect = require('../../src/db.js')
+connect();
 require('dotenv').config();
 
 app.use(cors());

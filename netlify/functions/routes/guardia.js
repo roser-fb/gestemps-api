@@ -1,9 +1,9 @@
 const express = require('express');
 const moment = require('moment');
 const router = express.Router();
-const connection = require('../../../src/db')
-const { Guardia } = require('../models/guardia-model');
-connection.connect();
+
+const { Guardia } = require('../models/guardia-model.js');
+
 router.get('/', async (req, res) => {
   try {
     const results = await Guardia.find().sort({ data: 1 });
