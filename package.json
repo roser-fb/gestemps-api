@@ -4,17 +4,24 @@
   
   "version": "1.0.0",
   
-  "main": "./netlify/functions/index.js",
+  "main": "functions/index.js",
+  
   "scripts": {
-    "start": "node ./netlify/functions/index.js",
-    "build": "echo 'No se necesita construir para una API Express'"
+  
+    
+  "start": "node functions/index.js",
+  
+    
+  "build": "netlify deploy --prod"
+  
   },
   
   "keywords": [],
   
-  "author": "",
+  "author": "roser-fb",
   
   "license": "ISC",
+  "type":"module",
   
   "description": "",
   
