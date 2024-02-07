@@ -6,7 +6,6 @@ const cors = require('cors');
 const app = express();
 const connect = require('./src/db.js');
 connect();
-require('dotenv').config();
 
 app.use(cors());
 app.use(bodyParser.json());
