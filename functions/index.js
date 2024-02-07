@@ -9,7 +9,7 @@ require('dotenv').config();
 
 app.use(cors());
 app.use(bodyParser.json());
-app.get('/', (_, res) => res.send('Hello World!'));
+app.get('/.netlify/functions/api', (_, res) => res.send('Hello World!'));
 
 app.use('/api/user', require('./routes/user'));
 
