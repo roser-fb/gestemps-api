@@ -9,8 +9,7 @@ connect();
 
 app.use(cors());
 app.use(bodyParser.json());
-app.get('/api/', (_, res) => res.send('API Works!'));
-
+router.get("/", (req, res) => res.send("Hello World!"));
 app.use('/api/user', require('./routes/user'));
 
 app.use('/api/periodes', require('./routes/vacances'));
@@ -19,6 +18,5 @@ app.use('/api/calendari', require('./routes/calendari'));
 app.use('/api/guardia', require('./routes/guardia'));
 app.use('/api/fitxar', require('./routes/fitxar'));
 
-app.use('/api', router);
-app.listen(3000);
+app.use("/.netlify/functions/api/", router);
 module.exports.handler = serverless(app)
